@@ -7,11 +7,18 @@ import {
   RssIcon,
   HeartIcon,
 } from '@heroicons/react/outline';
+import { signOut } from 'next-auth/react';
 
 function Sidebar() {
   return (
-    <div className='text-gray-500 bg-[#121212] p-5 text-sm border-r border-gray-900 '>
+    <div className='text-gray-500 bg-[#121212] p-5 text-sm border-r border-gray-900 min-h-screen'>
       <div className='space-y-4'>
+        <button
+          className='flex items-center justify-center space-x-2 border px-[24px] py-[12px] rounded-3xl border-[#18D860] hover:bg-[#18D860] hover:text-black'
+          onClick={() => signOut()}
+        >
+          <p>Logout</p>
+        </button>
         <button className='flex items-center justify-center space-x-2 hover:text-white'>
           <HomeIcon className='h-5 w-5' />
           <p>Home</p>
@@ -40,36 +47,6 @@ function Sidebar() {
         </button>
         <hr className='border-t-[0.1px] border-gray-900' />
 
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
-        <p className='cursor-pointer hover:text-white'>Playlist name</p>
         <p className='cursor-pointer hover:text-white'>Playlist name</p>
         <p className='cursor-pointer hover:text-white'>Playlist name</p>
         <p className='cursor-pointer hover:text-white'>Playlist name</p>
