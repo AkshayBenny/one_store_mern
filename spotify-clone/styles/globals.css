@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #18d860;
+    border-radius: 400px;
+    -webkit-border-radius: 400px;
+    -moz-border-radius: 400px;
+    -ms-border-radius: 400px;
+    -o-border-radius: 400px;
+  }
+}
