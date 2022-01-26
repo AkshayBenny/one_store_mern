@@ -6,7 +6,7 @@ import { useRecoilState } from 'recoil';
 import { useRecoilValue } from 'recoil';
 import playlistIdState, { playlistState } from '../atoms/playlistAtom';
 import useSpotify from '../hooks/useSpotify';
-import Songs from './Songs'
+import Songs from './Songs';
 
 const colors = [
   'from-indigo-500',
@@ -41,11 +41,11 @@ export default function Center() {
       });
   }, [spotifyApi, playlistId]);
   return (
-    <div className='text-white  flex-grow '>
+    <div className='flex-grow  text-white '>
       <header className='absolute top-5 right-8'>
-        <div className='flex items-center bg-black space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2 pl-2'>
+        <div className='flex cursor-pointer items-center space-x-3 rounded-full bg-black p-1 pr-2  text-white opacity-90 hover:opacity-80'>
           <img
-            className='rounded-full w-10 h-10 object-cover object-center p-[1px]'
+            className='h-10 w-10 rounded-full object-cover object-center p-[1px]'
             src={session?.user.image}
             alt='dp'
           />
@@ -55,10 +55,10 @@ export default function Center() {
       </header>
 
       <section
-        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white p-8`}
+        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 p-8 text-white`}
       >
         <img
-          className='h-44 w-44 shadow-2x1'
+          className='shadow-2x1 h-44 w-44'
           src={playlist?.images?.[0]?.url}
           alt=''
         />
@@ -68,7 +68,7 @@ export default function Center() {
         </div>
       </section>
       <div>
-          <Songs />
+        <Songs />
       </div>
     </div>
   );
