@@ -4,8 +4,8 @@ import {
   LibraryIcon,
   PlusCircleIcon,
   RssIcon,
-  HeartIcon,
 } from '@heroicons/react/outline';
+import { HeartIcon } from '@heroicons/react/solid';
 import { useSession } from 'next-auth/react';
 import { useState, useEffect } from 'react';
 import playlistIdState from '../atoms/playlistAtom';
@@ -34,7 +34,7 @@ function Sidebar() {
           onClick={() => signOut()}
         >
           <p>Logout</p>
-        </button> */} 
+        </button> */}
         <button className='flex items-center justify-center space-x-2 hover:text-white'>
           <HomeIcon className='h-5 w-5' />
           <p>Home</p>
@@ -49,15 +49,15 @@ function Sidebar() {
         </button>
         <hr className='border-t-[0.1px] border-gray-900' />
 
-        <button className='flex items-center justify-center space-x-2 hover:text-white'>
+        <button className='flex items-center justify-center space-x-2 hover:text-lime-600'>
           <PlusCircleIcon className='h-5 w-5' />
           <p>Create Playist</p>
         </button>
-        <button className='flex items-center justify-center space-x-2 hover:text-white'>
-          <HeartIcon className='h-5 w-5' />
+        <button className='flex items-center justify-center space-x-2 hover:text-red-500'>
+          <HeartIcon className='h-5 w-5 ' />
           <p>Liked Songs</p>
         </button>
-        <button className='flex items-center justify-center space-x-2 hover:text-white'>
+        <button className='flex items-center justify-center space-x-2 hover:text-cyan-600'>
           <RssIcon className='h-5 w-5' />
           <p>Your episodes</p>
         </button>

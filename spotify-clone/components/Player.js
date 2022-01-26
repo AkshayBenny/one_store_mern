@@ -72,7 +72,7 @@ function Player() {
     debounce((volume) => {
       spotifyApi.setVolume(volume).catch((err) => {});
     }, 500),
-    []
+    [volume]
   );
 
   return (
