@@ -27,7 +27,7 @@ function Sidebar() {
   }, [session, spotifyApi]);
 
   return (
-    <div className='text-gray-500 bg-[#121212] p-5 text-sm border-r border-gray-900 min-h-screen overflow-y-scroll h-screen'>
+    <div className='text-gray-500 bg-[#121212] p-5  border-r border-gray-900 min-h-screen overflow-y-scroll h-screen text-xs lg:text-sm sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex'>
       <div className='space-y-4'>
         <button
           className='flex items-center justify-center space-x-2 border px-[24px] py-[12px] rounded-3xl border-[#18D860] hover:bg-[#18D860] hover:text-black'
