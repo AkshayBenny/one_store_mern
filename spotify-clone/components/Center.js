@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import { ChevronDownIcon } from '@heroicons/react/outline';
 import { shuffle } from 'lodash';
 import { useRecoilState } from 'recoil';
@@ -41,8 +41,8 @@ export default function Center() {
       });
   }, [spotifyApi, playlistId]);
   return (
-    <div className='flex-grow  text-white '>
-      <header className='absolute top-5 right-8'>
+    <div className='h-screen  flex-grow overflow-y-scroll text-white'>
+      <header className='absolute top-5 right-8' onClick={signOut}>
         <div className='flex cursor-pointer items-center space-x-3 rounded-full bg-black p-1 pr-2  text-white opacity-90 hover:opacity-80'>
           <img
             className='h-10 w-10 rounded-full object-cover object-center p-[1px]'
