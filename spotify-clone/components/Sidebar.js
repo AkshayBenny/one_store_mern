@@ -27,14 +27,14 @@ function Sidebar() {
   }, [session, spotifyApi]);
 
   return (
-    <div className='text-gray-500 bg-[#121212] p-5  border-r border-gray-900 min-h-screen overflow-y-scroll h-screen text-xs lg:text-sm sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex'>
+    <div className='hidden h-screen min-h-screen overflow-y-scroll  border-r border-gray-900 bg-[#121212] p-5 pb-36 text-xs text-gray-500 sm:max-w-[12rem] md:inline-flex lg:max-w-[15rem] lg:text-sm'>
       <div className='space-y-4'>
         {/* <button
           className='flex items-center justify-center space-x-2 border px-[24px] py-[12px] rounded-3xl border-[#18D860] hover:bg-[#18D860] hover:text-black'
           onClick={() => signOut()}
         >
           <p>Logout</p>
-        </button> */}
+        </button> */} 
         <button className='flex items-center justify-center space-x-2 hover:text-white'>
           <HomeIcon className='h-5 w-5' />
           <p>Home</p>
