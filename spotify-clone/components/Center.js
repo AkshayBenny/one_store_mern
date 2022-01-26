@@ -24,7 +24,7 @@ export default function Center() {
   const playlistId = useRecoilValue(playlistIdState);
   const [playlist, setPlaylist] = useRecoilState(playlistState);
 
-  console.log(playlist);
+
 
   useEffect(() => {
     setColor(shuffle(colors).pop());
@@ -37,7 +37,7 @@ export default function Center() {
         setPlaylist(data.body);
       })
       .catch((err) => {
-        console.log('Something went wrong>>>>>>>>>>>>', err);
+        console.log('Something went wrong ', err);
       });
   }, [spotifyApi, playlistId]);
   return (

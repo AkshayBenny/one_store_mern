@@ -32,7 +32,6 @@ function Player() {
   const fetchCurrentSong = () => {
     if (!songInfo) {
       spotifyApi.getMyCurrentPlayingTrack().then((data) => {
-        console.log('Now playing ', data.body?.item);
         setCurrentIdTrack(data.body?.item?.id);
 
         spotifyApi.getMyCurrentPlaybackState().then((data) => {
@@ -72,7 +71,7 @@ function Player() {
     debounce((volume) => {
       spotifyApi.setVolume(volume).catch((err) => {});
     }, 500),
-    [volume]
+    []
   );
 
   return (
